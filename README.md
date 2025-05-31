@@ -2,6 +2,27 @@
 
 Functions/classes that make AWS Lambda functions more convenient to work with.
 
+## Installation
+
+To create a Lambda layer containing this library:
+
+```bash
+# Install the library into a designated directory (must be named "python/"):
+python3 -m pip install git+https://github.com/nicdgonzalez/lambda-utils.git --target python/
+
+# Zip the contents of the directory:
+zip -r lambda-utils-layer.zip python/
+
+# Upload the layer to AWS:
+aws lambda publish-layer-version \
+    --layer-name lambda-utils-layer \
+    --zip-file fileb://lambda-utils-layer.zip \
+    --compatible-runtimes python3.13
+
+# Clean up:
+rm --recursive ./python ./lambda-utils-layer.zip
+```
+
 ## Example
 
 ```python
