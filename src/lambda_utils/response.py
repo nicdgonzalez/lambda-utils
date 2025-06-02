@@ -33,8 +33,7 @@ class IntoResponse(Protocol):
 
 
 class PlainTextResponse(IntoResponse):
-    """
-    Represents an HTTP response with the `application/json` content type.
+    """Represents an HTTP response with the `application/json` content type.
 
     Parameters
     ----------
@@ -66,8 +65,7 @@ class PlainTextResponse(IntoResponse):
 
 
 class JsonResponse(IntoResponse):
-    """
-    Represents an HTTP response with the `application/json` content type.
+    """Represents an HTTP response with the `application/json` content type.
 
     Parameters
     ----------
