@@ -4,9 +4,8 @@ import functools
 import logging
 from typing import TYPE_CHECKING
 
-from response import IntoResponse
-
 from .error import HttpException
+from .response import IntoResponse
 
 if TYPE_CHECKING:
     from typing import Callable, TypeAlias
