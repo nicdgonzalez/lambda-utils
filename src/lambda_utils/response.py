@@ -1,12 +1,12 @@
 from __future__ import annotations
 
 import json
-from typing import TYPE_CHECKING, Protocol, runtime_checkable
+from typing import TYPE_CHECKING, Protocol, TypedDict, runtime_checkable
 
 from .status_code import StatusCode
 
 if TYPE_CHECKING:
-    from typing import Any, Mapping, MutableMapping, TypedDict
+    from typing import Any, Mapping, MutableMapping
 
 __all__ = ("Response", "IntoResponse", "PlainTextResponse", "JsonResponse")
 
